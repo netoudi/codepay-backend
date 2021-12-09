@@ -1,0 +1,36 @@
+### credit card valid
+POST http://localhost:3333/orders
+Content-Type: application/json
+
+{
+  "amount": 16.90,
+  "credit_card_name": "John Doe",
+  "credit_card_number": "4193523830170205"
+}
+
+### credit card invalid
+POST http://localhost:3333/orders
+Content-Type: application/json
+
+{
+  "amount": 16.90,
+  "credit_card_name": "John Doe",
+  "credit_card_number": "4000000000000000"
+}
+
+###
+PATCH http://localhost:3333/orders/1815b571-2fdb-45b4-9487-1778f9f300d7
+Content-Type: application/json
+
+{
+  "amount": 26.90
+}
+
+###
+DELETE http://localhost:3333/orders/1815b571-2fdb-45b4-9487-1778f9f300d7
+
+###
+GET http://localhost:3333/orders/1815b571-2fdb-45b4-9487-1778f9f300d7
+
+###
+GET http://localhost:3333/orders
