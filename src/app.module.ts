@@ -19,7 +19,7 @@ import { Account } from './accounts/entities/account.entity';
       models: [Order, Account],
       sync: {
         alter: true,
-        force: true, // don't use in production
+        // force: true, // don't use in production
       },
     }),
   ],

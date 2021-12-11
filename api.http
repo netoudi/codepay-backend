@@ -28,6 +28,7 @@ GET http://localhost:3333/accounts
 ### credit card valid
 POST http://localhost:3333/orders
 Content-Type: application/json
+x-token: 8fbfdbf66y8
 
 {
   "amount": 16.90,
@@ -38,6 +39,7 @@ Content-Type: application/json
 ### credit card invalid
 POST http://localhost:3333/orders
 Content-Type: application/json
+x-token: 8fbfdbf66y8
 
 {
   "amount": 16.90,
@@ -48,6 +50,7 @@ Content-Type: application/json
 ###
 PATCH http://localhost:3333/orders/1815b571-2fdb-45b4-9487-1778f9f300d7
 Content-Type: application/json
+x-token: 8fbfdbf66y8
 
 {
   "amount": 26.90
@@ -55,9 +58,12 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3333/orders/1815b571-2fdb-45b4-9487-1778f9f300d7
+x-token: 8fbfdbf66y8
 
 ###
 GET http://localhost:3333/orders/1815b571-2fdb-45b4-9487-1778f9f300d7
+x-token: 8fbfdbf66y8
 
 ###
 GET http://localhost:3333/orders
+x-token: 8fbfdbf66y8

@@ -16,14 +16,14 @@ export class OrdersService {
   create(createOrderDto: CreateOrderDto) {
     return this.orderModel.create({
       ...createOrderDto,
-      acccount_id: this.storageService.account.id,
+      account_id: this.storageService.account.id,
     });
   }
 
   findAll() {
     return this.orderModel.findAll({
       where: {
-        acccount_id: this.storageService.account.id,
+        account_id: this.storageService.account.id,
       },
     });
   }
@@ -32,7 +32,7 @@ export class OrdersService {
     return this.orderModel.findOne({
       where: {
         id,
-        acccount_id: this.storageService.account.id,
+        account_id: this.storageService.account.id,
       },
       rejectOnEmpty: new EmptyResultError(`Order with ID ${id} not toudn`),
     });
