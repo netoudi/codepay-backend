@@ -1,3 +1,30 @@
+###
+POST http://localhost:3333/accounts
+Content-Type: application/json
+
+{
+  "name": "My account"
+}
+
+###
+PATCH http://localhost:3333/accounts/384d6f3b-ebd6-46b3-ac53-474f3c8b571b
+Content-Type: application/json
+
+{
+  "name": "My account update"
+}
+
+###
+DELETE http://localhost:3333/accounts/384d6f3b-ebd6-46b3-ac53-474f3c8b571b
+
+###
+GET http://localhost:3333/accounts/384d6f3b-ebd6-46b3-ac53-474f3c8b571b
+
+###
+GET http://localhost:3333/accounts
+
+
+
 ### credit card valid
 POST http://localhost:3333/orders
 Content-Type: application/json
