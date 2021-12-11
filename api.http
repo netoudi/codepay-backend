@@ -1,5 +1,5 @@
 ###
-POST http://localhost:3333/accounts
+POST {{api_url}}/accounts
 Content-Type: application/json
 
 {
@@ -7,7 +7,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3333/accounts/384d6f3b-ebd6-46b3-ac53-474f3c8b571b
+PATCH {{api_url}}/accounts/{{account_id}}
 Content-Type: application/json
 
 {
@@ -15,20 +15,20 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3333/accounts/384d6f3b-ebd6-46b3-ac53-474f3c8b571b
+DELETE {{api_url}}/accounts/{{account_id}}
 
 ###
-GET http://localhost:3333/accounts/384d6f3b-ebd6-46b3-ac53-474f3c8b571b
+GET {{api_url}}/accounts/{{account_id}}
 
 ###
-GET http://localhost:3333/accounts
+GET {{api_url}}/accounts
 
 
 
 ### credit card valid
-POST http://localhost:3333/orders
+POST {{api_url}}/orders
 Content-Type: application/json
-x-token: 8fbfdbf66y8
+x-token: {{x_token}}
 
 {
   "amount": 16.90,
@@ -37,9 +37,9 @@ x-token: 8fbfdbf66y8
 }
 
 ### credit card invalid
-POST http://localhost:3333/orders
+POST {{api_url}}/orders
 Content-Type: application/json
-x-token: 8fbfdbf66y8
+x-token: {{x_token}}
 
 {
   "amount": 16.90,
@@ -48,22 +48,22 @@ x-token: 8fbfdbf66y8
 }
 
 ###
-PATCH http://localhost:3333/orders/1815b571-2fdb-45b4-9487-1778f9f300d7
+PATCH {{api_url}}/orders/{{order_id}}
 Content-Type: application/json
-x-token: 8fbfdbf66y8
+x-token: {{x_token}}
 
 {
   "amount": 26.90
 }
 
 ###
-DELETE http://localhost:3333/orders/1815b571-2fdb-45b4-9487-1778f9f300d7
-x-token: 8fbfdbf66y8
+DELETE {{api_url}}/orders/{{order_id}}
+x-token: {{x_token}}
 
 ###
-GET http://localhost:3333/orders/1815b571-2fdb-45b4-9487-1778f9f300d7
-x-token: 8fbfdbf66y8
+GET {{api_url}}/orders/{{order_id}}
+x-token: {{x_token}}
 
 ###
-GET http://localhost:3333/orders
-x-token: 8fbfdbf66y8
+GET {{api_url}}/orders
+x-token: {{x_token}}
