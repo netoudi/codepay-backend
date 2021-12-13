@@ -26,7 +26,11 @@ export class OrdersService {
       messages: [
         {
           key: 'transactions',
-          value: JSON.stringify({ ...createOrderDto, ...order }),
+          value: JSON.stringify({
+            id: order.id,
+            account_id: order.account_id,
+            ...createOrderDto,
+          }),
         },
       ],
     });

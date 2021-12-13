@@ -47,7 +47,7 @@ x-token: {{x_token}}
 {
   "amount": 16.90,
   "credit_card_name": "John Doe",
-  "credit_card_number": "4000000000000000",
+  "credit_card_number": "0000000000000000",
   "credit_card_expiration_month": 12,
   "credit_card_expiration_year": 2022,
   "credit_card_cvv": 123
